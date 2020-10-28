@@ -33,9 +33,9 @@
 ?>
 
 
-
 <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
  
     <style>
@@ -60,6 +60,8 @@
         font-family: 'Lato thinitalic';
         font-size: 20px;
         color: #ffffff;
+        box-sizing:border-box;
+        margin:auto;
     }
     input[type=text] {
     margin: 8px 0;
@@ -68,16 +70,13 @@
      border-radius: 10px;
     }
     input[type=password] {
-    width: 23%;
     margin: 8px 0;
-
     padding: 12px 20px;
     border: 2px ;
      border-radius: 10px;
     }
 
     input[type=submit] {
-    width: 23%;
     padding: 12px 20px;
     border: none ;
     display: inline-block;
@@ -87,37 +86,34 @@
      border-radius: 200px;
     }
     input[type=date] {
-    margin: 8px 0;
-    padding: 9px 20px;
-    border: 2px ;
-     border-radius: 10px;
-     color:#505050;
+    padding: 12px 20px;
+    border: none ;
+    display: inline-block;
+    text-align:center;
+    font-family: 'Lato italic';
+    
+     border-radius: 200px;
     }
     select{
-    margin: 8px 0;
-    padding: 9px 20px;
-    border: 2px ;
-     border-radius: 10px;
+    padding: 12px 20px;
+    border: none ;
+    display: inline-block;
+    text-align:center;
+    font-family: 'Lato italic';
+    color: #000000;
+     border-radius: 200px;
      background-color:#ffffff;
-    }
-    
-    option{
-    margin: 8px 0;
-    padding: 9px 20px;
-    border: 2px ;
-     border-radius: 10px;
-     
     }
     label{
         font-size:25px;
     }
     </style>
 
-   <h1 style="text-align:center;"> <?php echo $site_name?></h1>
-    </head>
-    <body style="padding:10px 500px">
+      </head>
+    <body >
+    <h1 style="text-align:center;"> <?php echo $site_name?> <br></h1>
         <div style="text-align:center;font-size:30px">Create New Account<br><br></div>
-        <div style="border-radius:8px;background-color:#CB8AFF;padding:40px;width:90%"> 
+        <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:2%;width:37%"> 
         
             <form action="SignUp.php" method="post">
 
@@ -136,8 +132,8 @@
                     <input style="width:100%" type="text" name="lastname" placeholder="Enter your Last Name"></input>
                     
                     <label style="color:#8f00ff;">Gender<br></label>
-                    <select style="width:100%;" name="gender" id="gender">
-                    <option value="null"></option>
+                    <select style="width:100%;" name="gender" id="gender" >
+                    <option value="null">Select</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="trans">Trans</option>
@@ -160,7 +156,7 @@
                 <input style="float:right" type="submit" value="Sign Up"  > </input>
                
                 </form>
-        </div>
+        </div><br>
         <div style="text-align:center;"><a style="color:white;  text-decoration: none;" href="index.php">Already have an account? Log in here</a></div>
     </body>
   

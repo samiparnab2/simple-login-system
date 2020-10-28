@@ -35,6 +35,7 @@
 
 <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
  
     <style>
@@ -59,25 +60,23 @@
         font-family: 'Lato thinitalic';
         font-size: 20px;
         color: #ffffff;
+        box-sizing:border-box;
+        margin:auto;
     }
     input[type=text] {
-    width: 23%;
     margin: 8px 0;
     padding: 12px 20px;
     border: 2px ;
      border-radius: 10px;
     }
     input[type=password] {
-    width: 23%;
     margin: 8px 0;
-
     padding: 12px 20px;
     border: 2px ;
      border-radius: 10px;
     }
 
     input[type=submit] {
-    width: 27%;
     padding: 12px 20px;
     border: none ;
     display: inline-block;
@@ -91,11 +90,11 @@
     }
     </style>
 
-   <h1 style="text-align:center;"> <?php echo $site_name?> <br></h1>
-    </head>
-    <body style="padding:10px 600px">
-        <div style="text-align:center"> your profile<br><br></div>
-        <div style="border-radius:8px;background-color:#CB8AFF;padding:40px;width:80%"> 
+      </head>
+    <body >
+    <h1 style="text-align:center;"> <?php echo $site_name?> <br></h1>
+         <div style="text-align:center"> your profile<br><br></div>
+        <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:40px;width:30%"> 
             <form action="Logout.php" method="post">
 
             <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?> </label>
