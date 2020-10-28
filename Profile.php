@@ -97,7 +97,7 @@
         <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:40px;width:30%"> 
             <form action="Logout.php" method="post">
 
-            <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?> </label>
+            <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?></label><br>
 
                 <label style="color:#8f00ff;float:center;"><?php echo "username : $username_val"; ?><br></label>
 

@@ -111,7 +111,7 @@
         <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:2%;width:20%"> 
             <form action="" method="post">
 
-            <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?> </label>
+            <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?> </label><br>
 
                 <label style="color:#8f00ff;">Username<br></label>
                 <input style="width:100%" type="text" name="username" placeholder="Enter your Username"><br></input>
