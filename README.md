@@ -1,2 +1,2 @@
 # simple-login-system
-THIS IS A SIMPLE LOGIN SYSTEM 
+Tis is a simple login system made with html,css and php.
