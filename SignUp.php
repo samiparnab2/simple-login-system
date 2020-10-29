@@ -1,5 +1,21 @@
 <?php
     $msg='';
+    $ip_birthday='';
+    $ip_firstname='';
+    $ip_gender='';
+    $ip_lastname='';
+    $ip_username='';
+    if(array_key_exists("username", $_POST))
+        $ip_username=$_POST['username'];
+    if(array_key_exists("firstname", $_POST))
+        $ip_firstname=$_POST['firstname'];
+    if(array_key_exists("lastname", $_POST))
+        $ip_lastname=$_POST['lastname'];
+    if(array_key_exists("birthday", $_POST))
+        $ip_birthday=$_POST['birthday'];
+    if(array_key_exists("gender", $_POST))
+        $ip_gender=$_POST['gender'];
+
     require('dbAdmin.php');
     $db_link=mysqli_connect($host,$user,$password,$db_name) or die('could not connect to server');
     
@@ -40,23 +56,23 @@
             <form action="SignUp.php" method="post">
                 <div style="width:47%;float:left;">
                     <label style="color:#8f00ff;">First Name</label>
-                    <input style="width:100%" type="text" name="firstname" placeholder="Enter your First Name" ></input>
+                    <input style="width:100%" type="text" name="firstname" value="<?php echo $ip_firstname?>" placeholder="Enter your First Name" ></input>
                     <label style="color:#8f00ff;">Birthday<br></label>
-                     <input style="width:100%;" type="date"  id="birthday" name="birthday">
+                     <input style="width:100%;" type="date"  id="birthday" value="<?php echo $ip_birthday?>"  name="birthday">
                 </div>
                 <div style="width:47%;float:right;">
                     <label style="color:#8f00ff;">Last Name</label>
-                    <input style="width:100%" type="text" name="lastname" placeholder="Enter your Last Name"></input>
+                    <input style="width:100%" type="text" name="lastname"  value="<?php echo $ip_lastname?>" placeholder="Enter your Last Name"></input>
                     <label style="color:#8f00ff;">Gender<br></label>
                     <select style="width:100%;" name="gender" id="gender" >
-                    <option value="null">Select</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="trans">Trans</option>
+                    <option value="null"  <?php if($ip_gender=='null')echo "selected"?> >Select</option>
+                    <option value="male" <?php if($ip_gender=='male')echo "selected"?> >Male</option>
+                    <option value="female" <?php if($ip_gender=='female')echo "selected"?> >Female</option>
+                    <option value="trans" <?php if($ip_gender=='trans')echo "selected"?> >Trans</option>
                     </select><br><br>
                 </div>
                 <label style="color:#8f00ff;">Username<br></label>
-                <input style="width:100%" type="text" name="username"  placeholder="Create a Username" ><br></input>
+                <input style="width:100%" type="text" name="username" value="<?php echo $ip_username?>"   placeholder="Create a Username" ><br></input>
                 <label style="color:#8f00ff;">Password<br></label>
                 <input style="width:100%" type="password" name="password" placeholder="Create a Passsword"><br></input>
                 <label style="color:#8f00ff;">Re-type Password<br></label>
