@@ -36,60 +36,7 @@
 <html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
- 
-    <style>
-    @font-face{
-        font-family:'lato thinitalic';
-        src: url('fonts/Lato/Lato-LightItalic.ttf');
-    }
-    @font-face{
-        font-family:'lato italic';
-        src: url('fonts/Lato/Lato-BoldItalic.ttf');
-    }
-    
-    h1 {
-        font-family: 'dancing script';
-        font-weight: normal;
-        color: #ffffff;
-        font-size: 50px;
-       
-    }  
-    body {background-color:#8f00ff;
-        background-image: linear-gradient(to bottom right,#8f00ff, #00000A);
-        font-family: 'Lato thinitalic';
-        font-size: 20px;
-        color: #ffffff;
-        box-sizing:border-box;
-        margin:auto;
-    }
-    input[type=text] {
-    margin: 8px 0;
-    padding: 12px 20px;
-    border: 2px ;
-     border-radius: 10px;
-    }
-    input[type=password] {
-    margin: 8px 0;
-    padding: 12px 20px;
-    border: 2px ;
-     border-radius: 10px;
-    }
-
-    input[type=submit] {
-    padding: 12px 20px;
-    border: none ;
-    display: inline-block;
-    text-align:center;
-    font-family: 'Lato italic';
-    color: #8f00ff;
-     border-radius: 200px;
-    }
-    label{
-        font-size:25px;
-    }
-    </style>
-
+    <link rel="stylesheet" href="css/style.css"> 
       </head>
     <body >
     <h1 style="text-align:center;"> <?php echo $site_name?> <br></h1>
