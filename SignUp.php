@@ -1,4 +1,3 @@
-
 <?php
     $msg='';
     require('dbAdmin.php');
@@ -28,11 +27,7 @@
                     $msg="username already exixts";
             }
      }
-    
-    
 ?>
-
-
 <html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,23 +37,16 @@
     <h1 style="text-align:center;"> <?php echo $site_name?> <br></h1>
         <div style="text-align:center;font-size:30px">Create New Account<br><br></div>
         <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:2%;width:37%"> 
-        
             <form action="SignUp.php" method="post">
-
-            
-
                 <div style="width:47%;float:left;">
                     <label style="color:#8f00ff;">First Name</label>
                     <input style="width:100%" type="text" name="firstname" placeholder="Enter your First Name"></input>
-
                     <label style="color:#8f00ff;">Birthday<br></label>
                      <input style="width:100%;" type="date"  id="birthday" name="birthday">
                 </div>
-                
                 <div style="width:47%;float:right;">
                     <label style="color:#8f00ff;">Last Name</label>
                     <input style="width:100%" type="text" name="lastname" placeholder="Enter your Last Name"></input>
-                    
                     <label style="color:#8f00ff;">Gender<br></label>
                     <select style="width:100%;" name="gender" id="gender" >
                     <option value="null">Select</option>
@@ -67,26 +55,16 @@
                     <option value="trans">Trans</option>
                     </select><br><br>
                 </div>
-
-                
-
                 <label style="color:#8f00ff;">Username<br></label>
                 <input style="width:100%" type="text" name="username"  placeholder="Create a Username" ><br></input>
-
                 <label style="color:#8f00ff;">Password<br></label>
                 <input style="width:100%" type="password" name="password" placeholder="Create a Passsword"><br></input>
-                
                 <label style="color:#8f00ff;">Re-type Password<br></label>
                 <input style="width:100%" type="password" name="re-password" placeholder="Re-type your Passsword"><br><br></input>
-
                 <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?> </label>
-
-                <input style="float:right" type="submit" value="Sign Up"  > </input>
-               
+                <input style="float:right" type="submit" value="Sign Up"  > </input>               
                 </form>
         </div><br>
         <div style="text-align:center;"><a style="color:white;  text-decoration: none;" href="index.php">Already have an account? Log in here</a></div>
     </body>
-  
 </html>
-

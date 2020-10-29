@@ -43,10 +43,7 @@
             $msg='wrong username or password';
         }
      }
-    
-    
 ?>
-
 <html>
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,19 +54,13 @@
         <div style="text-align:center;"> Log in to your account<br><br></div>
         <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:2%;width:20%"> 
             <form action="" method="post">
-
             <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?> </label><br>
-
                 <label style="color:#8f00ff;">Username<br></label>
                 <input style="width:100%" type="text" name="username" placeholder="Enter your Username"><br></input>
-
                 <label style="color:#8f00ff;">Password<br></label>
-                <input style="width:100%" type="password" name="password" placeholder="Enter your Passsword"><br><br></input>
-                
-                <input style="float:right" type="submit" value="Log In"> </input>
-                
+                <input style="width:100%" type="password" name="password" placeholder="Enter your Passsword"><br><br></input>  
+                <input style="float:right" type="submit" value="Log In"> </input>    
         </div><br>
         <div style="text-align:center;"><a style="color:white;  text-decoration: none;" href="SignUp.php">Don't have an account? Sign Up here</a></div>
     </body>
-  
 </html>
