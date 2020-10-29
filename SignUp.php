@@ -40,7 +40,7 @@
             <form action="SignUp.php" method="post">
                 <div style="width:47%;float:left;">
                     <label style="color:#8f00ff;">First Name</label>
-                    <input style="width:100%" type="text" name="firstname" placeholder="Enter your First Name"></input>
+                    <input style="width:100%" type="text" name="firstname" placeholder="Enter your First Name" ></input>
                     <label style="color:#8f00ff;">Birthday<br></label>
                      <input style="width:100%;" type="date"  id="birthday" name="birthday">
                 </div>
