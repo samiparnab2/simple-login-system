@@ -18,7 +18,8 @@ h1 {
     font-size: 50px;
    
 }  
-body {background-color:#8f00ff;
+body {
+    background-repeat: no-repeat;
     background-image: linear-gradient(to bottom right,#8f00ff, #00000A);
     font-family: 'Lato thinitalic';
     font-size: 20px;
@@ -26,13 +27,16 @@ body {background-color:#8f00ff;
     box-sizing:border-box;
     margin:auto;
 }
+
 input[type=text] {
 margin: 8px 0;
 padding: 12px 20px;
 border: 2px ;
  border-radius: 10px;
+ font-family:'Lato italic';
 }
 input[type=password] {
+font-family:'Lato italic';
 margin: 8px 0;
 padding: 12px 20px;
 border: 2px ;
@@ -44,7 +48,7 @@ padding: 12px 20px;
 border: none ;
 display: inline-block;
 text-align:center;
-font-family: 'Lato italic';
+font-family:'Lato italic';
 color: #8f00ff;
  border-radius: 200px;
 }

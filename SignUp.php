@@ -23,25 +23,39 @@
     { 
             $current_username=$_POST["username"];
             $current_password=password_hash($_POST['password'],PASSWORD_DEFAULT);
+        if($current_username!='')
+        {
             $result=mysqli_query($db_link,"select * from ".$table_name." where username='".$current_username."'") ;
-            if(mysqli_num_rows($result)==0)
+            if(mysqli_num_rows($result)==0 )
             {
-                if(!mysqli_query($db_link,"insert into ".$table_name." values('".$_POST['username']."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['birthday']."','".$_POST['gender']."','".$current_password."')"))
+                if($_POST['password']==$_POST['re-password'])
                 {
-                    $msg='fill all the fields properly';
+                    if(!mysqli_query($db_link,"insert into ".$table_name." values('".$_POST['username']."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['birthday']."','".$_POST['gender']."','".$current_password."')"))
+                    {
+                        $msg='fill all the fields properly';
+                    }
+                    else
+                    {
+                        setcookie('user_logged_in',true,time()+(86400 * 30),"/");
+                        setcookie('username',$current_username,time()+(86400 * 30),"/");
+                        setcookie('password',$current_password,time()+(86400 * 30),"/");
+                        header('Location:Login.php');
+                    }
                 }
                 else
                 {
-                    setcookie('user_logged_in',true,time()+(86400 * 30),"/");
-                    setcookie('username',$current_username,time()+(86400 * 30),"/");
-                    setcookie('password',$current_password,time()+(86400 * 30),"/");
-                    header('Location:Login.php');
+                    $msg="retype password correctly";
                 }
             }
             else
             {
                     $msg="username already exixts";
             }
+        }
+        else
+        {
+            $msg="username can not be blank";
+        }
      }
 ?>
 <html>
@@ -72,7 +86,7 @@
                     </select><br><br>
                 </div>
                 <label style="color:#8f00ff;">Username<br></label>
-                <input style="width:100%" type="text" name="username" value="<?php echo $ip_username?>"   placeholder="Create a Username" ><br></input>
+                <input style="width:100%;" type="text" name="username" value="<?php echo $ip_username?>"   placeholder="Create a Username" ><br></input>
                 <label style="color:#8f00ff;">Password<br></label>
                 <input style="width:100%" type="password" name="password" placeholder="Create a Passsword"><br></input>
                 <label style="color:#8f00ff;">Re-type Password<br></label>
