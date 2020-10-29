@@ -37,14 +37,19 @@
     <body >
     <h1 style="text-align:center;"> <?php echo $site_name?> <br></h1>
          <div style="text-align:center"> your profile<br><br></div>
-        <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:40px;width:30%"> 
-            <form action="Logout.php" method="post">
-            <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?></label><br>
+        <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:40px;width:20%"> 
+            <form  action="Logout.php" method="post">
+                <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?></label><br>
                 <label style="color:#8f00ff;float:center;"><?php echo "username : $username_val"; ?><br></label>
                 <label style="color:#8f00ff;"><?php echo "Name : $firstname_val  $lastname_val"; ?><br></label>
                 <label style="color:#8f00ff;"><?php echo "Birthday : $birthday_val"; ?><br></label>
-                <label style="color:#8f00ff;"><?php echo "Gender : $gender_val"; ?><br></label>
-             <input style="float:right" type="submit" value="Log Out"> </input> 
+                <label style="color:#8f00ff;"><?php echo "Gender : $gender_val"; ?><br><br></label>
+                <div style="margin:0% 5%;">
+             
+                <input style="margin:5% 5%;" type="submit" name="delete" value="Delete Account"> </input> 
+                <input style="margin:5% 5%;" type="submit" name="logout" value="Log Out"> </input> 
+                </div>
+             </form>
         </div>
     </body>
 </html>
