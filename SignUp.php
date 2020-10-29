@@ -35,7 +35,7 @@
       </head>
     <body >
     <h1 style="text-align:center;"> <?php echo $site_name?> <br></h1>
-        <div style="text-align:center;font-size:30px">Create New Account<br><br></div>
+        <div style="text-align:center;font-size:30px">Create New Account<br></div>
         <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:2%;width:37%"> 
             <form action="SignUp.php" method="post">
                 <div style="width:47%;float:left;">
