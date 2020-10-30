@@ -46,8 +46,9 @@
                 <label style="color:#8f00ff;"><?php echo "Gender : $gender_val"; ?><br><br></label>
                 <div style="margin:0% 5%;">
              
-                <input style="margin:5% 5%;" type="submit" name="delete" value="Delete Account"> </input> 
+                
                 <input style="margin:5% 5%;" type="submit" name="logout" value="Log Out"> </input> 
+                <input style="margin:5% 5%;color:#CA0B00" type="submit" name="delete" value="Delete Account"> </input> 
                 </div>
              </form>
         </div>

@@ -25,6 +25,8 @@
             $current_password=password_hash($_POST['password'],PASSWORD_DEFAULT);
         if($current_username!='')
         {
+            if($_POST['firstname']!='' and $_POST['lastname']!='')
+            {
             $result=mysqli_query($db_link,"select * from ".$table_name." where username='".$current_username."'") ;
             if(mysqli_num_rows($result)==0 )
             {
@@ -50,6 +52,10 @@
             else
             {
                     $msg="username already exixts";
+            }
+            }
+            else{
+                $msg="enter your name properly";
             }
         }
         else

@@ -1,5 +1,4 @@
 <?php
-
     require('dbAdmin.php');
     $db_link=mysqli_connect($host,$user,$password,$db_name) or die('could not connect to server');
     if(array_key_exists('delete',$_POST))
