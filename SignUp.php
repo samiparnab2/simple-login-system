@@ -51,7 +51,7 @@
             }
             else
             {
-                    $msg="username already exixts";
+                    $msg="username already exists";
             }
             }
             else{

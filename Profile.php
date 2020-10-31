@@ -39,6 +39,9 @@
          <div style="text-align:center"> your profile<br><br></div>
         <div style="margin:auto;border-radius:8px;background-color:#CB8AFF;padding:40px;width:20%"> 
             <form  action="LgoutOrDlt.php" method="post">
+                <a href="EditProfile.php">
+                <img style="float:right;border-radius:10px;width:30px" src="img/pen.png"></img>
+                </a>
                 <label style="background-color:#8f00ff;color:#ffffff;" ><?php echo $msg; ?></label><br>
                 <label style="color:#8f00ff;float:center;"><?php echo "username : $username_val"; ?><br></label>
                 <label style="color:#8f00ff;"><?php echo "Name : $firstname_val  $lastname_val"; ?><br></label>
