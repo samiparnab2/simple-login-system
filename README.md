@@ -1,5 +1,5 @@
 # simple-login-system
-Tis is a simple login system made with html,css and php.
+This is a simple login system made with html,css and php.
 
 <b>STEPS:-</b><br>
   1> Make sure to install <b>XAMPP</b>.<br>
